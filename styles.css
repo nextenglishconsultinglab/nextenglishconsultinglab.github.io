@@ -1627,3 +1627,175 @@ button:focus-visible {
     width: min(92vw, 430px);
   }
 }
+
+
+/* =========================================================
+   v1.5 — HERO ACTION GRID
+========================================================= */
+
+.hero-action-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  max-width: 760px;
+  margin-top: 34px;
+}
+
+.hero-action {
+  min-height: 88px;
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: 14px;
+  align-items: center;
+  padding: 16px 18px;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  text-decoration: none;
+  box-shadow: 0 8px 22px rgba(11,47,91,0.07);
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    border-color 160ms ease,
+    background 160ms ease;
+}
+
+.hero-action:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(11,47,91,0.13);
+}
+
+.hero-action-icon {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+
+.hero-action strong,
+.hero-action small {
+  display: block;
+}
+
+.hero-action strong {
+  margin-bottom: 3px;
+  line-height: 1.35;
+  font-size: 1rem;
+}
+
+.hero-action small {
+  color: inherit;
+  opacity: 0.72;
+  line-height: 1.45;
+  font-size: 0.78rem;
+}
+
+/* Calendly / primary conversion */
+.hero-action-calendly {
+  color: var(--navy-deep);
+  background: linear-gradient(135deg, #F3CA62, var(--gold));
+  border-color: rgba(11,47,91,0.08);
+}
+
+.hero-action-calendly .hero-action-icon {
+  color: var(--navy-deep);
+  background: rgba(255,255,255,0.56);
+}
+
+/* Internal NECL method */
+.hero-action-method {
+  color: var(--navy-deep);
+  background: rgba(255,255,255,0.86);
+  border-color: var(--navy);
+}
+
+.hero-action-method .hero-action-icon {
+  color: white;
+  background: var(--navy);
+}
+
+/* LINE */
+.hero-action-line {
+  color: #143B2C;
+  background: #F4FFF8;
+  border-color: #06C755;
+}
+
+.hero-action-line .hero-action-icon {
+  color: white;
+  background: #06C755;
+}
+
+.line-mark {
+  font-size: 0.65rem;
+  letter-spacing: 0;
+}
+
+/* Instagram */
+.hero-action-instagram {
+  position: relative;
+  color: var(--navy-deep);
+  background: white;
+  border-color: transparent;
+}
+
+.hero-action-instagram::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  z-index: -1;
+  border-radius: 22px;
+  background: linear-gradient(
+    135deg,
+    #833AB4 0%,
+    #C13584 28%,
+    #E1306C 50%,
+    #F77737 76%,
+    #FCAF45 100%
+  );
+}
+
+.hero-action-instagram .hero-action-icon {
+  color: white;
+  background: linear-gradient(
+    135deg,
+    #833AB4,
+    #E1306C 54%,
+    #FCAF45
+  );
+}
+
+.instagram-mark {
+  font-size: 0.9rem;
+}
+
+.hero-microcopy {
+  margin-top: 18px;
+}
+
+@media (max-width: 760px) {
+  .hero-action-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-action {
+    min-height: 78px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-action {
+    grid-template-columns: 44px 1fr;
+    gap: 12px;
+    padding: 14px 15px;
+  }
+
+  .hero-action-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+  }
+}
