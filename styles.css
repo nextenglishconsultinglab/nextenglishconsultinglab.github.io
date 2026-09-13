@@ -1818,10 +1818,10 @@ button:focus-visible {
 }
 
 .compliance-summary {
-  display: grid;
-  grid-template-columns: 64px 1fr 32px;
-  gap: 16px;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+  gap: 18px;
   padding: 12px 0;
   cursor: pointer;
   list-style: none;
@@ -1836,6 +1836,13 @@ button:focus-visible {
   display: none;
 }
 
+.compliance-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+}
+
 .compliance-icon {
   width: 58px;
   height: 58px;
@@ -1844,19 +1851,23 @@ button:focus-visible {
   background: rgba(255,255,255,0.94);
   padding: 5px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.14);
+  flex-shrink: 0;
 }
 
-.compliance-summary-text strong,
-.compliance-summary-text small {
-  display: block;
+.compliance-summary-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
 }
 
 .compliance-summary-text strong {
-  margin-bottom: 3px;
+  margin-bottom: 4px;
   color: #FFFFFF;
   font-size: 1.02rem;
   font-weight: 800;
   letter-spacing: 0.01em;
+  line-height: 1.3;
 }
 
 .compliance-summary-text small {
@@ -1876,6 +1887,7 @@ button:focus-visible {
   font-size: 1.15rem;
   font-weight: 900;
   transition: transform 180ms ease;
+  flex-shrink: 0;
 }
 
 .compliance-details[open] .compliance-chevron {
@@ -1947,7 +1959,11 @@ button:focus-visible {
 
 @media (max-width: 760px) {
   .compliance-summary {
-    grid-template-columns: 54px 1fr 30px;
+    align-items: flex-start;
+  }
+
+  .compliance-left {
+    align-items: flex-start;
     gap: 12px;
   }
 
