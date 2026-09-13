@@ -9,7 +9,8 @@ const NECL = {
   price: "NT$4,000",
   session: "70 分鐘 × 1 次",
   group: "4 人",
-  schedule: "週一至週四晚間",
+  options: "2 個可選時段",
+  reservation: "按月預約・先到先得",
 
   calendly: "https://calendly.com/justin-nextenglishconsultinglab/30min",
   line: "https://lin.ee/NBuN2Krj",
@@ -49,7 +50,7 @@ const contentMap = {
   price: NECL.price,
   session: NECL.session,
   group: NECL.group,
-  schedule: NECL.schedule
+  options: NECL.options
 };
 
 Object.entries(contentMap).forEach(([key, value]) => {

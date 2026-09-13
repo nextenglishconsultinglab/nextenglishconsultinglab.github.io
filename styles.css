@@ -1499,3 +1499,101 @@ button:focus-visible {
 }
 
 .lab-card { display: none !important; }
+
+
+/* =========================================================
+   v1.4 — SEO / DISCOVERABILITY / SCHEDULING / TRUST
+========================================================= */
+
+.search-intent {
+  background:
+    radial-gradient(circle at 8% 8%, rgba(232,188,79,0.08), transparent 24%),
+    var(--warm-white);
+}
+
+.intent-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.intent-card {
+  padding: 28px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.intent-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.12rem;
+}
+
+.intent-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.schedule-note {
+  margin-top: 20px;
+  padding: 20px 24px;
+  color: rgba(255,255,255,0.86);
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: var(--radius-sm);
+}
+
+.schedule-note strong {
+  color: var(--gold);
+}
+
+.footer-trust {
+  margin-top: 30px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.56);
+  font-size: 0.78rem;
+}
+
+.footer-trust details {
+  max-width: 760px;
+}
+
+.footer-trust summary {
+  display: inline-block;
+  cursor: pointer;
+  color: rgba(255,255,255,0.66);
+  font-weight: 700;
+}
+
+.footer-trust summary:hover,
+.footer-trust summary:focus-visible {
+  color: var(--gold);
+}
+
+.footer-trust p {
+  margin: 10px 0 0;
+  line-height: 1.65;
+}
+
+@media (max-width: 980px) {
+  .intent-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 680px) {
+  .intent-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .intent-card {
+    padding: 22px;
+  }
+
+  .schedule-note {
+    padding: 18px 20px;
+  }
+}

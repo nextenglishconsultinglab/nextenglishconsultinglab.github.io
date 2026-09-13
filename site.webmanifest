@@ -1,0 +1,16 @@
+{
+  "name": "NECL 下一章英文顧問實驗室",
+  "short_name": "NECL",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F8F8F5",
+  "theme_color": "#0B2F5B",
+  "lang": "zh-Hant-TW",
+  "icons": [
+    {
+      "src": "/images/logo-framed.png",
+      "sizes": "any",
+      "type": "image/png"
+    }
+  ]
+}
