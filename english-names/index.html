@@ -1,1 +1,715 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>100 English Names for Adults | NECL 英文名字指南</title>
+
+<meta name="description"
+content="Explore 100 natural English names for adults with pronunciation, meaning, origin, and native-speaker impressions. 精選100個適合成人使用的英文名字。">
+
+<style>
+:root {
+    --navy: #18496f;
+    --gold: #e8bc4f;
+    --text: #26343d;
+    --muted: #707a81;
+    --line: #e5e9eb;
+    --soft: #f7f8f8;
+    --white: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--white);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                 "Noto Sans TC", "PingFang TC",
+                 "Microsoft JhengHei", sans-serif;
+    line-height: 1.55;
+}
+
+.container {
+    width: min(92%, 1180px);
+    margin: auto;
+}
+
+
+/* HEADER */
+
+.topbar {
+    padding: 22px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.brand {
+    color: var(--navy);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: .92rem;
+    letter-spacing: .03em;
+}
+
+.brand span {
+    color: var(--gold);
+}
+
+.back {
+    float: right;
+    color: var(--muted);
+    text-decoration: none;
+    font-size: .88rem;
+}
+
+.back:hover {
+    color: var(--navy);
+}
+
+
+/* HERO */
+
+.hero {
+    max-width: 760px;
+    margin: auto;
+    padding: 72px 20px 42px;
+    text-align: center;
+}
+
+.eyebrow {
+    color: var(--gold);
+    font-size: .76rem;
+    font-weight: 700;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    margin-bottom: 13px;
+}
+
+h1 {
+    color: var(--navy);
+    font-size: clamp(2.4rem, 6vw, 4.2rem);
+    line-height: 1.05;
+    letter-spacing: -.04em;
+    margin: 0;
+}
+
+.hero-cn {
+    color: var(--navy);
+    font-size: clamp(1.15rem, 3vw, 1.5rem);
+    margin: 12px 0 0;
+}
+
+.intro {
+    color: var(--muted);
+    max-width: 660px;
+    margin: 22px auto 0;
+    font-size: .98rem;
+}
+
+
+/* CONTROLS */
+
+.controls {
+    max-width: 760px;
+    margin: 10px auto 48px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 22px;
+}
+
+.tab {
+    border: 1px solid var(--line);
+    background: white;
+    color: var(--navy);
+    border-radius: 100px;
+    padding: 10px 18px;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.tab:hover {
+    border-color: var(--gold);
+}
+
+.tab.active {
+    color: white;
+    background: var(--navy);
+    border-color: var(--navy);
+}
+
+.search-wrap {
+    max-width: 520px;
+    margin: auto;
+}
+
+#search {
+    width: 100%;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 14px 18px;
+    font: inherit;
+    font-size: 1rem;
+    outline: none;
+}
+
+#search:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(232,188,79,.15);
+}
+
+
+/* ALPHABET */
+
+.alphabet {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.letter {
+    border: 0;
+    background: none;
+    padding: 4px 5px;
+    font: inherit;
+    font-size: .8rem;
+    color: var(--navy);
+    cursor: pointer;
+}
+
+.letter.disabled {
+    color: #ccd1d4;
+    cursor: default;
+}
+
+.letter:not(.disabled):hover {
+    color: var(--gold);
+}
+
+
+/* LIST */
+
+.section-title {
+    color: var(--navy);
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 12px;
+    margin-bottom: 0;
+    font-size: .85rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 48px;
+}
+
+.card {
+    padding: 27px 0 29px;
+    border-bottom: 1px solid var(--line);
+}
+
+.name {
+    color: var(--navy);
+    margin: 0 0 5px;
+    font-size: 1.55rem;
+    line-height: 1.2;
+}
+
+.pronunciation {
+    color: var(--muted);
+    margin: 0 0 10px;
+    font-size: .9rem;
+}
+
+.impression {
+    margin: 0 0 4px;
+    font-size: .94rem;
+}
+
+.impression strong {
+    color: var(--navy);
+}
+
+.origin {
+    color: var(--muted);
+    margin: 0;
+    font-size: .86rem;
+}
+
+.empty {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: var(--muted);
+    padding: 60px 0;
+}
+
+
+/* CTA */
+
+.cta {
+    max-width: 820px;
+    margin: 90px auto 70px;
+    padding: 48px 35px;
+    text-align: center;
+    background: var(--soft);
+    border-top: 3px solid var(--gold);
+}
+
+.cta h2 {
+    color: var(--navy);
+    margin: 0;
+    font-size: clamp(1.6rem,4vw,2.25rem);
+}
+
+.cta-cn {
+    color: var(--navy);
+    margin: 7px 0 18px;
+}
+
+.cta p {
+    max-width: 610px;
+    margin: 0 auto 24px;
+    color: var(--muted);
+}
+
+.cta a {
+    display: inline-block;
+    background: var(--navy);
+    color: white;
+    text-decoration: none;
+    border-radius: 100px;
+    padding: 12px 23px;
+    font-weight: 600;
+}
+
+.cta a:hover {
+    background: #123b5c;
+}
+
+
+/* FOOTER */
+
+footer {
+    border-top: 1px solid var(--line);
+    text-align: center;
+    padding: 28px 10px 40px;
+    color: var(--muted);
+    font-size: .8rem;
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:850px) {
+    .grid {
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 34px;
+    }
+}
+
+@media(max-width:600px) {
+
+    .hero {
+        padding-top: 50px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tab {
+        font-size: .82rem;
+        padding: 9px 13px;
+    }
+
+    .cta {
+        padding: 38px 22px;
+        margin-top: 65px;
+    }
+}
+</style>
+</head>
+
+
+<body>
+
+<header class="topbar">
+    <div class="container">
+
+        <a href="../" class="brand">
+            NEXT ENGLISH <span>CONSULTING LAB</span>
+        </a>
+
+        <a href="../" class="back">
+            ← Back to NECL
+        </a>
+
+    </div>
+</header>
+
+
+<main class="container">
+
+<section class="hero">
+
+    <div class="eyebrow">NECL FREE RESOURCE</div>
+
+    <h1>Find Your English Name</h1>
+
+    <p class="hero-cn">
+        找到適合你的英文名字
+    </p>
+
+    <p class="intro">
+        Explore 100 natural English names for adults, with pronunciation,
+        meaning, origin, and the impression they give native English speakers.
+        <br><br>
+        精選 100 個自然、適合成人使用的英文名字，
+        包含發音、名字來源、含義，以及給英語母語者的印象。
+    </p>
+
+</section>
+
+
+<section class="controls">
+
+    <div class="tabs">
+
+        <button class="tab active" data-category="male">
+            Male 男性
+        </button>
+
+        <button class="tab" data-category="female">
+            Female 女性
+        </button>
+
+        <button class="tab" data-category="neutral">
+            Gender-Neutral 中性
+        </button>
+
+    </div>
+
+
+    <div class="search-wrap">
+
+        <input
+            id="search"
+            type="search"
+            placeholder="Search a name / 搜尋名字"
+            aria-label="Search names"
+        >
+
+    </div>
+
+    <div id="alphabet" class="alphabet"></div>
+
+</section>
+
+
+<section>
+
+    <div id="sectionTitle" class="section-title">
+        Male Names · 男性名字
+    </div>
+
+    <div id="grid" class="grid"></div>
+
+</section>
+
+
+<section class="cta">
+
+    <h2>Your English name is only the beginning.</h2>
+
+    <div class="cta-cn">
+        選好英文名字，只是第一步。
+    </div>
+
+    <p>
+        NECL helps adults build practical English they can actually use —
+        through guided speaking, relevant topics, and personalized feedback.
+    </p>
+
+    <a href="../">
+        Explore NECL →
+    </a>
+
+</section>
+
+</main>
+
+
+<footer>
+    © Next English Consulting Lab
+</footer>
+
+
+<script>
+
+const names = {
+
+male: [
+["Adam","亞當","AD-əm","/ˈædəm/","Classic","Strong, straightforward","Hebrew","man, earth"],
+["Alexander","亞歷山大","al-ig-ZAN-der","/ˌælɪɡˈzændər/","Classic","Strong, sophisticated","Greek","defender of men"],
+["Arthur","亞瑟","AR-thər","/ˈɑrθər/","Classic","Distinguished, traditional","Celtic","possibly associated with bear"],
+["Benjamin","班傑明","BEN-jə-min","/ˈbɛndʒəmɪn/","Classic","Warm, intelligent","Hebrew","son of the right hand"],
+["Charlie","查理","CHAR-lee","/ˈtʃɑrli/","Classic","Friendly, approachable","Germanic","free man"],
+["Daniel","丹尼爾","DAN-yəl","/ˈdænjəl/","Classic","Friendly, dependable","Hebrew","God is my judge"],
+["David","大衛","DAY-vid","/ˈdeɪvɪd/","Classic","Familiar, dependable","Hebrew","beloved"],
+["Edward","愛德華","ED-werd","/ˈɛdwərd/","Classic","Traditional, distinguished","Old English","wealthy guardian"],
+["Elijah","伊萊賈","ih-LY-jə","/ɪˈlaɪdʒə/","Modern classic","Warm, distinctive","Hebrew","my God is Yahweh"],
+["Ethan","伊森","EE-thən","/ˈiθən/","Modern classic","Friendly, dependable","Hebrew","strong, enduring"],
+["Gabriel","加百列","GAY-bree-əl","/ˈɡeɪbriəl/","Classic","Warm, sophisticated","Hebrew","God is my strength"],
+["George","喬治","JORJ","/dʒɔrdʒ/","Classic","Traditional, established","Greek","farmer"],
+["Harry","哈利","HAIR-ee","/ˈhɛri/","Classic","Friendly, approachable","Germanic","home ruler"],
+["Henry","亨利","HEN-ree","/ˈhɛnri/","Classic","Polished, established","Germanic","home ruler"],
+["Isaac","艾薩克","EYE-zək","/ˈaɪzək/","Classic","Intelligent, friendly","Hebrew","he will laugh"],
+["Jack","傑克","JAK","/dʒæk/","Classic","Strong, approachable","English","traditionally derived from John"],
+["Jacob","傑可布","JAY-kəb","/ˈdʒeɪkəb/","Classic","Familiar, dependable","Hebrew","traditionally supplanter"],
+["James","詹姆斯","JAYMZ","/dʒeɪmz/","Classic","Strong, professional","Hebrew","supplanter"],
+["Joseph","約瑟夫","JOH-zəf","/ˈdʒoʊzəf/","Classic","Traditional, dependable","Hebrew","he will add"],
+["Leo","里歐","LEE-oh","/ˈlioʊ/","Modern classic","Strong, stylish","Latin","lion"],
+["Liam","里安","LEE-əm","/ˈliəm/","Modern","Friendly, confident","Irish","derived from William"],
+["Logan","洛根","LOH-gən","/ˈloʊɡən/","Modern","Relaxed, confident","Scottish Gaelic","little hollow"],
+["Lucas","盧卡斯","LOO-kəs","/ˈlukəs/","Modern classic","Friendly, polished","Greek/Latin","traditionally associated with Lucania"],
+["Luke","路克","LOOK","/luk/","Classic","Strong, straightforward","Greek/Latin","traditionally associated with Lucania"],
+["Mason","梅森","MAY-sən","/ˈmeɪsən/","Modern","Friendly, confident","English/French","stoneworker"],
+["Matthew","馬修","MATH-yoo","/ˈmæθju/","Classic","Friendly, dependable","Hebrew","gift of God"],
+["Michael","麥可","MY-kəl","/ˈmaɪkəl/","Classic","Strong, professional","Hebrew","who is like God?"],
+["Noah","諾亞","NOH-ə","/ˈnoʊə/","Modern classic","Gentle, approachable","Hebrew","rest, comfort"],
+["Oliver","奧利佛","OL-i-ver","/ˈɑlɪvər/","Modern classic","Warm, polished","Latin/French","associated with olive tree"],
+["Oscar","奧斯卡","OS-kər","/ˈɑskər/","Classic","Distinctive, confident","Irish/Norse","meaning disputed"],
+["Samuel","山繆","SAM-yoo-əl","/ˈsæmjuəl/","Classic","Warm, dependable","Hebrew","traditionally God has heard"],
+["Sebastian","賽巴斯欽","sə-BAS-chən","/səˈbæstʃən/","Classic","Sophisticated, distinctive","Greek","from Sebastia"],
+["Theodore","西奧多","THEE-ə-dor","/ˈθiədɔr/","Classic","Intelligent, distinguished","Greek","gift of God"],
+["Thomas","湯瑪斯","TOM-əs","/ˈtɑməs/","Classic","Traditional, dependable","Aramaic","twin"],
+["William","威廉","WIL-yəm","/ˈwɪljəm/","Classic","Strong, professional","Germanic","resolute protector"]
+],
+
+female: [
+["Abigail","艾比蓋兒","AB-i-gayl","/ˈæbɪɡeɪl/","Classic","Warm, polished","Hebrew","my father's joy"],
+["Alice","艾莉絲","AL-is","/ˈælɪs/","Classic","Elegant, approachable","Germanic","noble"],
+["Amelia","艾蜜莉亞","ə-MEE-lee-ə","/əˈmiliə/","Classic","Elegant, warm","Germanic","associated with work"],
+["Anna","安娜","AN-ə","/ˈænə/","Classic","Simple, elegant","Hebrew","grace"],
+["Ava","艾娃","AY-və","/ˈeɪvə/","Modern classic","Elegant, concise","Multiple origins","meaning uncertain"],
+["Charlotte","夏洛特","SHAR-lət","/ˈʃɑrlət/","Classic","Elegant, sophisticated","French/Germanic","free"],
+["Chloe","克蘿伊","KLOH-ee","/ˈkloʊi/","Modern classic","Bright, friendly","Greek","young green shoot"],
+["Claire","克萊兒","KLAIR","/klɛr/","Classic","Elegant, professional","French/Latin","clear, bright"],
+["Eleanor","艾蓮諾","EL-ə-nor","/ˈɛlənɔr/","Classic","Sophisticated, distinguished","French/Occitan","meaning uncertain"],
+["Elizabeth","伊莉莎白","ih-LIZ-ə-bəth","/ɪˈlɪzəbəθ/","Classic","Formal, distinguished","Hebrew","my God is an oath"],
+["Ella","艾拉","EL-ə","/ˈɛlə/","Modern classic","Warm, approachable","Germanic/English","origin varies"],
+["Emily","艾蜜莉","EM-ə-lee","/ˈɛməli/","Classic","Friendly, polished","Latin","associated with rival"],
+["Emma","艾瑪","EM-ə","/ˈɛmə/","Classic","Warm, approachable","Germanic","whole, universal"],
+["Evelyn","艾芙琳","EV-ə-lin","/ˈɛvəlɪn/","Classic","Elegant, polished","English/French","origin and meaning vary"],
+["Grace","葛蕾絲","GRAYS","/ɡreɪs/","Classic","Elegant, refined","Latin/English","grace"],
+["Hannah","漢娜","HAN-ə","/ˈhænə/","Classic","Warm, approachable","Hebrew","grace, favor"],
+["Harper","哈珀","HAR-pər","/ˈhɑrpər/","Modern","Confident, contemporary","English","harp player"],
+["Isabella","伊莎貝拉","iz-ə-BEL-ə","/ˌɪzəˈbɛlə/","Classic","Elegant, expressive","Hebrew via Romance languages","my God is an oath"],
+["Julia","茱莉亞","JOO-lee-ə","/ˈdʒuliə/","Classic","Elegant, professional","Latin","feminine form of Julius"],
+["Layla","蕾拉","LAY-lə","/ˈleɪlə/","Modern","Warm, expressive","Arabic","night"],
+["Lily","莉莉","LIL-ee","/ˈlɪli/","Classic","Gentle, bright","English/Latin","lily"],
+["Lucy","露西","LOO-see","/ˈlusi/","Classic","Bright, friendly","Latin","associated with light"],
+["Maya","瑪雅","MY-ə","/ˈmaɪə/","Modern classic","Warm, international","Multiple origins","multiple meanings"],
+["Mia","米婭","MEE-ə","/ˈmiə/","Modern classic","Friendly, stylish","Multiple origins","often associated with Maria"],
+["Nora","諾拉","NOR-ə","/ˈnɔrə/","Classic","Warm, elegant","Multiple origins","often derived from Eleanor or Honora"],
+["Olivia","奧莉維亞","ə-LIV-ee-ə","/əˈlɪviə/","Modern classic","Elegant, friendly","Latin","associated with olive"],
+["Ruby","露比","ROO-bee","/ˈrubi/","Classic","Bright, distinctive","Latin/English","ruby"],
+["Sarah","莎拉","SAIR-ə","/ˈsɛrə/","Classic","Warm, professional","Hebrew","princess"],
+["Sofia","蘇菲亞","soh-FEE-ə","/soʊˈfiə/","Classic","Elegant, international","Greek","wisdom"],
+["Sophia","蘇菲亞","soh-FEE-ə","/soʊˈfiə/","Classic","Elegant, sophisticated","Greek","wisdom"],
+["Sophie","蘇菲","SOH-fee","/ˈsoʊfi/","Classic","Friendly, elegant","Greek","wisdom"],
+["Stella","史黛拉","STEL-ə","/ˈstɛlə/","Classic","Stylish, distinctive","Latin","star"],
+["Victoria","維多利亞","vik-TOR-ee-ə","/vɪkˈtɔriə/","Classic","Strong, sophisticated","Latin","victory"],
+["Violet","維奧莉特","VY-ə-lət","/ˈvaɪələt/","Classic","Elegant, distinctive","Latin/French","violet"],
+["Zoe","柔伊","ZOH-ee","/ˈzoʊi/","Classic","Bright, energetic","Greek","life"]
+],
+
+neutral: [
+["Alex","艾力克斯","AL-eks","/ˈælɛks/","Classic","Confident, versatile","Greek","defender"],
+["Ash","艾許","ASH","/æʃ/","Modern","Cool, understated","English","associated with the ash tree"],
+["Avery","艾芙莉","AY-və-ree","/ˈeɪvəri/","Modern","Polished, versatile","English","traditionally associated with elf ruler"],
+["Blake","布雷克","BLAYK","/bleɪk/","Modern","Strong, stylish","English","surname with disputed meaning"],
+["Cameron","卡麥隆","KAM-ə-rən","/ˈkæmərən/","Modern classic","Friendly, confident","Scottish Gaelic","crooked nose"],
+["Casey","凱西","KAY-see","/ˈkeɪsi/","Modern classic","Friendly, relaxed","Irish","traditionally associated with vigilant"],
+["Charlie","查理","CHAR-lee","/ˈtʃɑrli/","Classic","Friendly, approachable","Germanic","free"],
+["Chris","克里斯","KRIS","/krɪs/","Classic","Friendly, straightforward","Greek","associated with Christopher or Christine"],
+["Finley","芬利","FIN-lee","/ˈfɪnli/","Modern","Friendly, distinctive","Scottish/Irish Gaelic","traditionally fair-haired warrior"],
+["Jamie","傑米","JAY-mee","/ˈdʒeɪmi/","Classic","Warm, approachable","Hebrew via James","traditionally supplanter"],
+["Jay","傑","JAY","/dʒeɪ/","Modern classic","Simple, confident","English","associated with the jay bird or J-names"],
+["Jesse","傑西","JES-ee","/ˈdʒɛsi/","Classic","Friendly, relaxed","Hebrew","meaning uncertain"],
+["Jordan","喬登","JOR-dən","/ˈdʒɔrdən/","Modern classic","Strong, versatile","Hebrew","to descend, flow down"],
+["Kai","凱","KYE","/kaɪ/","Modern","International, distinctive","Multiple origins","multiple meanings"],
+["Kit","基特","KIT","/kɪt/","Classic","Distinctive, playful","Greek via Christopher","traditionally bearer of Christ"],
+["Lee","李","LEE","/li/","Classic","Simple, understated","English","clearing, meadow"],
+["Max","麥克斯","MAKS","/mæks/","Classic","Strong, energetic","Latin","associated with Maximus, greatest"],
+["Morgan","摩根","MOR-gən","/ˈmɔrɡən/","Classic","Strong, sophisticated","Welsh","traditionally associated with sea"],
+["Parker","帕克","PAR-kər","/ˈpɑrkər/","Modern","Confident, polished","English","park keeper"],
+["Quinn","昆","KWIN","/kwɪn/","Modern","Distinctive, polished","Irish","descendant of Conn"],
+["Reese","瑞斯","REES","/ris/","Modern","Clean, sophisticated","Welsh","enthusiasm, ardor"],
+["Riley","萊利","RYE-lee","/ˈraɪli/","Modern","Friendly, energetic","Irish/English","origin varies"],
+["River","里弗","RIV-ər","/ˈrɪvər/","Modern","Natural, unconventional","English","river"],
+["Robin","羅賓","ROB-in","/ˈrɑbɪn/","Classic","Gentle, approachable","Germanic","originally a diminutive of Robert"],
+["Rowan","羅文","ROH-ən","/ˈroʊən/","Modern","Natural, distinctive","Irish/Scottish","multiple origins"],
+["Sage","賽吉","SAYJ","/seɪdʒ/","Modern","Calm, distinctive","Latin/English","wise, or the herb"],
+["Sam","山姆","SAM","/sæm/","Classic","Friendly, versatile","Hebrew","usually from Samuel or Samantha"],
+["Sasha","莎夏","SAH-shə","/ˈsɑʃə/","International","Warm, distinctive","Greek via Slavic languages","diminutive of Alexander or Alexandra"],
+["Skyler","史凱勒","SKY-lər","/ˈskaɪlər/","Modern","Energetic, contemporary","Dutch","associated with scholar"],
+["Taylor","泰勒","TAY-lər","/ˈteɪlər/","Modern classic","Casual, professional","English/French","tailor"]
+]
+
+};
+
+
+let category = "male";
+
+const grid = document.getElementById("grid");
+const search = document.getElementById("search");
+const alphabet = document.getElementById("alphabet");
+const sectionTitle = document.getElementById("sectionTitle");
+const tabs = document.querySelectorAll(".tab");
+
+const titles = {
+    male: "Male Names · 男性名字",
+    female: "Female Names · 女性名字",
+    neutral: "Gender-Neutral Names · 中性名字"
+};
+
+
+function renderNames() {
+
+    const term = search.value.trim().toLowerCase();
+
+    const filtered = names[category].filter(n =>
+        n[0].toLowerCase().includes(term) ||
+        n[1].includes(term)
+    );
+
+    if (!filtered.length) {
+        grid.innerHTML =
+        `<div class="empty">No matching names found. / 找不到符合的名字。</div>`;
+        return;
+    }
+
+    grid.innerHTML = filtered.map(n => `
+        <article class="card" data-letter="${n[0][0]}">
+
+            <h2 class="name">${n[0]}</h2>
+
+            <p class="pronunciation">
+                ${n[1]} · ${n[2]} · ${n[3]}
+            </p>
+
+            <p class="impression">
+                <strong>${n[4]}</strong> · ${n[5]}
+            </p>
+
+            <p class="origin">
+                ${n[6]} · “${n[7]}”
+            </p>
+
+        </article>
+    `).join("");
+}
+
+
+function renderAlphabet() {
+
+    const available =
+        [...new Set(names[category].map(n => n[0][0]))];
+
+    alphabet.innerHTML =
+        "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map(letter => {
+
+            const active = available.includes(letter);
+
+            return `
+                <button
+                    class="letter ${active ? "" : "disabled"}"
+                    data-letter="${letter}"
+                    ${active ? "" : "disabled"}>
+                    ${letter}
+                </button>
+            `;
+
+        }).join("");
+}
+
+
+tabs.forEach(tab => {
+
+    tab.addEventListener("click", () => {
+
+        tabs.forEach(t => t.classList.remove("active"));
+
+        tab.classList.add("active");
+
+        category = tab.dataset.category;
+
+        search.value = "";
+
+        sectionTitle.textContent = titles[category];
+
+        renderNames();
+        renderAlphabet();
+
+    });
+
+});
+
+
+search.addEventListener("input", renderNames);
+
+
+alphabet.addEventListener("click", e => {
+
+    const button = e.target.closest(".letter:not(.disabled)");
+
+    if (!button) return;
+
+    search.value = "";
+
+    renderNames();
+
+    requestAnimationFrame(() => {
+
+        const card = document.querySelector(
+            `.card[data-letter="${button.dataset.letter}"]`
+        );
+
+        if (card) {
+            card.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+        }
+
+    });
+
+});
+
+
+renderNames();
+renderAlphabet();
+
+</script>
+
+</body>
+</html>
