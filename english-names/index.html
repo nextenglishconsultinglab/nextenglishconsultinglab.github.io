@@ -12,12 +12,15 @@ content="Explore 100 natural English names for adults with pronunciation, meanin
 <style>
 :root {
     --navy: #18496f;
+    --navy-dark: #103a5d;
     --gold: #e8bc4f;
-    --text: #26343d;
-    --muted: #707a81;
-    --line: #e5e9eb;
-    --soft: #f7f8f8;
-    --white: #ffffff;
+    --gold-soft: #f7e7b8;
+    --text: #24415a;
+    --muted: #687d8e;
+    --cream: #fffdf8;
+    --card: rgba(255,255,255,.84);
+    --shadow: 0 8px 24px rgba(30,60,80,.07);
+    --max-width: 1180px;
 }
 
 * {
@@ -30,222 +33,344 @@ html {
 
 body {
     margin: 0;
-    background: var(--white);
     color: var(--text);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-                 "Noto Sans TC", "PingFang TC",
-                 "Microsoft JhengHei", sans-serif;
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        "Noto Sans TC",
+        "PingFang TC",
+        "Microsoft JhengHei",
+        sans-serif;
     line-height: 1.55;
+
+    background-color: var(--cream);
+
+    /* Same subtle grid language as the NECL homepage */
+    background-image:
+        linear-gradient(rgba(24,73,111,.055) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(24,73,111,.055) 1px, transparent 1px);
+
+    background-size: 36px 36px;
 }
 
 .container {
-    width: min(92%, 1180px);
+    width: min(92%, var(--max-width));
     margin: auto;
 }
 
 
-/* HEADER */
+/* =========================
+   HEADER
+   ========================= */
 
-.topbar {
-    padding: 22px 0;
-    border-bottom: 1px solid var(--line);
+.site-header {
+    background: rgba(255,253,248,.97);
+    border-bottom: 1px solid rgba(24,73,111,.12);
 }
 
-.brand {
-    color: var(--navy);
+.header-inner {
+    min-height: 118px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.logo {
+    width: 300px;
+    height: auto;
+    display: block;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.nav a {
+    color: var(--navy-dark);
     text-decoration: none;
-    font-weight: 700;
-    font-size: .92rem;
-    letter-spacing: .03em;
+    font-size: .91rem;
+    font-weight: 650;
+    white-space: nowrap;
 }
 
-.brand span {
-    color: var(--gold);
+.nav a:hover {
+    color: #d99c16;
 }
 
-.back {
-    float: right;
-    color: var(--muted);
-    text-decoration: none;
-    font-size: .88rem;
-}
-
-.back:hover {
-    color: var(--navy);
+.consultation {
+    background: var(--gold);
+    color: var(--navy-dark) !important;
+    padding: 13px 20px;
+    border-radius: 999px;
+    box-shadow: 0 5px 15px rgba(232,188,79,.18);
 }
 
 
-/* HERO */
+/* =========================
+   HERO
+   ========================= */
 
 .hero {
-    max-width: 760px;
+    max-width: 830px;
     margin: auto;
-    padding: 72px 20px 42px;
     text-align: center;
+    padding: 72px 20px 38px;
 }
 
 .eyebrow {
-    color: var(--gold);
-    font-size: .76rem;
-    font-weight: 700;
-    letter-spacing: .16em;
-    text-transform: uppercase;
-    margin-bottom: 13px;
+    color: #d99c16;
+    font-size: .8rem;
+    font-weight: 750;
+    letter-spacing: .18em;
+    margin-bottom: 15px;
 }
 
-h1 {
-    color: var(--navy);
-    font-size: clamp(2.4rem, 6vw, 4.2rem);
-    line-height: 1.05;
-    letter-spacing: -.04em;
+.hero h1 {
+    color: var(--navy-dark);
     margin: 0;
+    font-size: clamp(2.3rem, 5.2vw, 4rem);
+    line-height: 1.12;
+    font-weight: 800;
+    letter-spacing: -.035em;
 }
 
-.hero-cn {
-    color: var(--navy);
-    font-size: clamp(1.15rem, 3vw, 1.5rem);
-    margin: 12px 0 0;
+.hero h1 .gold {
+    color: var(--gold);
+}
+
+.english-title {
+    color: var(--navy-dark);
+    margin-top: 7px;
+    font-size: clamp(1.35rem, 3vw, 1.8rem);
+    font-weight: 650;
 }
 
 .intro {
-    color: var(--muted);
-    max-width: 660px;
+    max-width: 720px;
     margin: 22px auto 0;
-    font-size: .98rem;
+    color: var(--text);
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+.intro-cn {
+    display: block;
+    margin-top: 8px;
 }
 
 
-/* CONTROLS */
+/* =========================
+   CONTROLS
+   ========================= */
 
 .controls {
-    max-width: 760px;
-    margin: 10px auto 48px;
+    max-width: 780px;
+    margin: 0 auto 48px;
 }
 
 .tabs {
     display: flex;
     justify-content: center;
-    gap: 8px;
-    flex-wrap: wrap;
-    margin-bottom: 22px;
+    gap: 12px;
+    margin-bottom: 18px;
 }
 
 .tab {
-    border: 1px solid var(--line);
-    background: white;
-    color: var(--navy);
-    border-radius: 100px;
-    padding: 10px 18px;
+    min-width: 180px;
+    border: 1px solid rgba(24,73,111,.12);
+    background: rgba(255,255,255,.78);
+    color: var(--navy-dark);
+    border-radius: 999px;
+    padding: 13px 18px;
     font: inherit;
-    font-weight: 600;
+    font-weight: 650;
     cursor: pointer;
-    transition: .2s;
+    box-shadow: var(--shadow);
+    transition: .18s ease;
 }
 
 .tab:hover {
-    border-color: var(--gold);
+    transform: translateY(-1px);
+    border-color: rgba(232,188,79,.75);
 }
 
 .tab.active {
     color: white;
-    background: var(--navy);
-    border-color: var(--navy);
+    background: linear-gradient(135deg, var(--navy-dark), #17618e);
+    border-color: transparent;
 }
 
 .search-wrap {
-    max-width: 520px;
+    max-width: 650px;
     margin: auto;
+    position: relative;
+}
+
+.search-icon {
+    position: absolute;
+    left: 21px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--navy);
+    font-size: 1.1rem;
+    pointer-events: none;
 }
 
 #search {
     width: 100%;
-    border: 1px solid var(--line);
-    border-radius: 12px;
-    padding: 14px 18px;
+    padding: 15px 20px 15px 53px;
+    border-radius: 999px;
+    border: 1px solid rgba(24,73,111,.14);
+    background: rgba(255,255,255,.92);
+    color: var(--navy-dark);
     font: inherit;
     font-size: 1rem;
     outline: none;
+    box-shadow: var(--shadow);
 }
 
 #search:focus {
     border-color: var(--gold);
-    box-shadow: 0 0 0 3px rgba(232,188,79,.15);
+    box-shadow:
+        0 0 0 3px rgba(232,188,79,.14),
+        var(--shadow);
 }
-
-
-/* ALPHABET */
 
 .alphabet {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 5px;
-    margin-top: 20px;
+    gap: 8px;
+    margin-top: 22px;
 }
 
 .letter {
     border: 0;
-    background: none;
-    padding: 4px 5px;
+    background: transparent;
+    color: var(--navy-dark);
+    padding: 4px;
     font: inherit;
-    font-size: .8rem;
-    color: var(--navy);
+    font-size: .82rem;
+    font-weight: 650;
     cursor: pointer;
 }
 
+.letter:hover {
+    color: #d99c16;
+}
+
 .letter.disabled {
-    color: #ccd1d4;
+    opacity: .23;
     cursor: default;
 }
 
-.letter:not(.disabled):hover {
-    color: var(--gold);
+
+/* =========================
+   SECTION HEADING
+   ========================= */
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 18px;
 }
-
-
-/* LIST */
 
 .section-title {
-    color: var(--navy);
-    border-bottom: 1px solid var(--line);
-    padding-bottom: 12px;
-    margin-bottom: 0;
-    font-size: .85rem;
-    letter-spacing: .08em;
-    text-transform: uppercase;
+    color: var(--navy-dark);
+    font-size: .95rem;
+    font-weight: 800;
+    letter-spacing: .07em;
+    white-space: nowrap;
 }
+
+.section-line {
+    height: 1px;
+    background: var(--gold);
+    flex: 1;
+    opacity: .75;
+}
+
+.resource-label {
+    color: var(--navy);
+    font-size: .68rem;
+    letter-spacing: .13em;
+    white-space: nowrap;
+}
+
+
+/* =========================
+   NAME CARDS
+   ========================= */
 
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 48px;
+    gap: 15px;
 }
 
 .card {
-    padding: 27px 0 29px;
-    border-bottom: 1px solid var(--line);
+    min-height: 190px;
+    padding: 23px 25px;
+    border-radius: 10px;
+    border: 1px solid rgba(24,73,111,.12);
+    background: var(--card);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(3px);
+    transition: .18s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(232,188,79,.65);
+    box-shadow: 0 11px 28px rgba(30,60,80,.10);
 }
 
 .name {
-    color: var(--navy);
-    margin: 0 0 5px;
+    margin: 0 0 4px;
+    color: var(--navy-dark);
     font-size: 1.55rem;
     line-height: 1.2;
+    font-weight: 800;
+}
+
+.chinese {
+    margin: 0 0 2px;
+    color: var(--navy);
+    font-size: 1rem;
+    font-weight: 650;
 }
 
 .pronunciation {
-    color: var(--muted);
-    margin: 0 0 10px;
+    color: var(--text);
+    margin: 0 0 8px;
     font-size: .9rem;
 }
 
-.impression {
-    margin: 0 0 4px;
-    font-size: .94rem;
+.style-tag {
+    display: inline-block;
+    margin-bottom: 7px;
+    padding: 2px 10px;
+    background: var(--gold-soft);
+    color: var(--navy-dark);
+    border-radius: 999px;
+    font-size: .73rem;
 }
 
-.impression strong {
-    color: var(--navy);
+.impression {
+    color: var(--navy-dark);
+    margin: 0 0 3px;
+    font-size: .95rem;
 }
 
 .origin {
@@ -256,140 +381,334 @@ h1 {
 
 .empty {
     grid-column: 1 / -1;
+    padding: 70px 20px;
     text-align: center;
     color: var(--muted);
-    padding: 60px 0;
 }
 
 
-/* CTA */
+/* =========================
+   CTA
+   ========================= */
+
+.cta-wrap {
+    margin-top: 75px;
+    background:
+        linear-gradient(
+            110deg,
+            rgba(255,253,248,.97),
+            rgba(247,249,249,.97)
+        );
+    border-top: 1px solid rgba(24,73,111,.08);
+}
 
 .cta {
-    max-width: 820px;
-    margin: 90px auto 70px;
-    padding: 48px 35px;
-    text-align: center;
-    background: var(--soft);
-    border-top: 3px solid var(--gold);
+    min-height: 215px;
+    display: grid;
+    grid-template-columns: 1.1fr 1px .9fr;
+    align-items: center;
+    gap: 38px;
+    padding-top: 45px;
+    padding-bottom: 45px;
+}
+
+.cta-divider {
+    width: 1px;
+    height: 110px;
+    background: rgba(24,73,111,.18);
 }
 
 .cta h2 {
-    color: var(--navy);
-    margin: 0;
-    font-size: clamp(1.6rem,4vw,2.25rem);
+    color: var(--navy-dark);
+    margin: 0 0 7px;
+    font-size: clamp(1.5rem, 3vw, 2rem);
 }
 
 .cta-cn {
-    color: var(--navy);
-    margin: 7px 0 18px;
+    color: var(--navy-dark);
+    font-size: 1.05rem;
 }
 
-.cta p {
-    max-width: 610px;
-    margin: 0 auto 24px;
-    color: var(--muted);
+.cta-copy {
+    color: var(--text);
+    margin: 0 0 18px;
 }
 
-.cta a {
+.cta-button {
     display: inline-block;
-    background: var(--navy);
+    padding: 12px 26px;
+    border-radius: 999px;
+    background: var(--gold);
+    color: var(--navy-dark);
+    text-decoration: none;
+    font-weight: 750;
+    box-shadow: 0 7px 18px rgba(232,188,79,.22);
+}
+
+.cta-button:hover {
+    transform: translateY(-1px);
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+.footer {
+    background:
+        linear-gradient(
+            110deg,
+            #123e61,
+            #0d3554
+        );
+    color: white;
+}
+
+.footer-inner {
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+}
+
+.footer-logo {
+    width: 235px;
+    height: auto;
+    display: block;
+}
+
+/*
+   The real logo contains dark blue text.
+   It sits on a small light panel in the footer
+   so the actual brand artwork remains unchanged.
+*/
+.footer-logo-box {
+    display: inline-block;
+    background: rgba(255,255,255,.97);
+    border-radius: 8px;
+    padding: 9px 13px;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-nav a {
     color: white;
     text-decoration: none;
-    border-radius: 100px;
-    padding: 12px 23px;
-    font-weight: 600;
-}
-
-.cta a:hover {
-    background: #123b5c;
-}
-
-
-/* FOOTER */
-
-footer {
-    border-top: 1px solid var(--line);
-    text-align: center;
-    padding: 28px 10px 40px;
-    color: var(--muted);
     font-size: .8rem;
+    opacity: .92;
+}
+
+.footer-nav a:hover {
+    color: var(--gold);
+}
+
+.copyright {
+    margin-top: 20px;
+    color: rgba(255,255,255,.68);
+    font-size: .72rem;
 }
 
 
-/* RESPONSIVE */
+/* =========================
+   RESPONSIVE
+   ========================= */
 
-@media(max-width:850px) {
-    .grid {
-        grid-template-columns: repeat(2,1fr);
-        column-gap: 34px;
+@media (max-width: 1000px) {
+
+    .nav {
+        gap: 14px;
+    }
+
+    .nav a:not(.consultation) {
+        display: none;
+    }
+
+    .logo {
+        width: 255px;
     }
 }
 
-@media(max-width:600px) {
+@media (max-width: 850px) {
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .resource-label {
+        display: none;
+    }
+}
+
+@media (max-width: 650px) {
+
+    body {
+        background-size: 28px 28px;
+    }
+
+    .header-inner {
+        min-height: 88px;
+    }
+
+    .logo {
+        width: 205px;
+    }
+
+    .consultation {
+        font-size: .76rem;
+        padding: 10px 13px;
+    }
 
     .hero {
-        padding-top: 50px;
+        padding: 50px 8px 32px;
+    }
+
+    .tabs {
+        gap: 6px;
+    }
+
+    .tab {
+        min-width: 0;
+        flex: 1;
+        padding: 10px 6px;
+        font-size: .75rem;
+    }
+
+    .alphabet {
+        gap: 5px;
     }
 
     .grid {
         grid-template-columns: 1fr;
     }
 
-    .tab {
-        font-size: .82rem;
-        padding: 9px 13px;
+    .card {
+        min-height: 0;
     }
 
     .cta {
-        padding: 38px 22px;
-        margin-top: 65px;
+        display: block;
+        text-align: center;
+        padding: 42px 10px;
+    }
+
+    .cta-divider {
+        display: none;
+    }
+
+    .cta-right {
+        margin-top: 25px;
+    }
+
+    .footer-inner {
+        display: block;
+        padding-top: 38px;
+        padding-bottom: 38px;
+        text-align: center;
+    }
+
+    .footer-logo {
+        width: 200px;
+    }
+
+    .footer-right {
+        margin-top: 25px;
+        text-align: center;
+    }
+
+    .footer-nav {
+        justify-content: center;
     }
 }
+
 </style>
 </head>
 
 
 <body>
 
-<header class="topbar">
-    <div class="container">
+<!-- HEADER -->
 
-        <a href="../" class="brand">
-            NEXT ENGLISH <span>CONSULTING LAB</span>
+<header class="site-header">
+
+<div class="container header-inner">
+
+    <a href="../" class="logo-link">
+
+        <img
+            src="../images/logo-horizontal.png"
+            alt="Next English Consulting Lab 下一章英文顧問實驗室"
+            class="logo">
+
+    </a>
+
+    <nav class="nav">
+
+        <a href="../#method">NECL 方法</a>
+        <a href="../#programs">方案</a>
+        <a href="../#process">每週流程</a>
+        <a href="../#testimonials">客戶回饋</a>
+        <a href="../#about">關於 Justin</a>
+        <a href="../#faq">常見問題</a>
+
+        <a href="../#contact" class="consultation">
+            預約程度討論
         </a>
 
-        <a href="../" class="back">
-            ← Back to NECL
-        </a>
+    </nav>
 
-    </div>
+</div>
+
 </header>
 
 
-<main class="container">
+<main>
 
-<section class="hero">
 
-    <div class="eyebrow">NECL FREE RESOURCE</div>
+<!-- HERO -->
 
-    <h1>Find Your English Name</h1>
+<section class="container hero">
 
-    <p class="hero-cn">
-        找到適合你的英文名字
-    </p>
+    <div class="eyebrow">
+        FREE RESOURCE
+    </div>
+
+    <h1>
+        找到適合你的<span class="gold">英文名字</span>
+    </h1>
+
+    <div class="english-title">
+        Find Your English Name
+    </div>
 
     <p class="intro">
-        Explore 100 natural English names for adults, with pronunciation,
-        meaning, origin, and the impression they give native English speakers.
-        <br><br>
-        精選 100 個自然、適合成人使用的英文名字，
-        包含發音、名字來源、含義，以及給英語母語者的印象。
+
+        Explore 100 natural English names for adults,
+        with pronunciation, meaning, origin,
+        and the impression they give native English speakers.
+
+        <span class="intro-cn">
+            精選 100 個自然、適合成人使用的英文名字，<br>
+            包含發音、名字來源、含義，以及給英語母語者的印象。
+        </span>
+
     </p>
 
 </section>
 
 
-<section class="controls">
+<!-- FILTERS -->
+
+<section class="container controls">
 
     <div class="tabs">
 
@@ -410,63 +729,142 @@ footer {
 
     <div class="search-wrap">
 
+        <span class="search-icon">
+            🔍
+        </span>
+
         <input
             id="search"
             type="search"
             placeholder="Search a name / 搜尋名字"
-            aria-label="Search names"
-        >
+            aria-label="Search names">
 
     </div>
+
 
     <div id="alphabet" class="alphabet"></div>
 
 </section>
 
 
-<section>
+<!-- NAME LIST -->
 
-    <div id="sectionTitle" class="section-title">
-        Male Names · 男性名字
+<section class="container">
+
+    <div class="section-heading">
+
+        <div id="sectionTitle" class="section-title">
+            MALE NAMES · 男性名字
+        </div>
+
+        <div class="section-line"></div>
+
+        <div class="resource-label">
+            100 NAMES FOR YOUR NEXT CHAPTER
+        </div>
+
     </div>
+
 
     <div id="grid" class="grid"></div>
 
 </section>
 
 
-<section class="cta">
+<!-- CTA -->
 
-    <h2>Your English name is only the beginning.</h2>
+<section class="cta-wrap">
 
-    <div class="cta-cn">
-        選好英文名字，只是第一步。
+<div class="container cta">
+
+    <div class="cta-left">
+
+        <h2>
+            Your English name is only the beginning.
+        </h2>
+
+        <div class="cta-cn">
+            選好英文名字，只是第一步。
+        </div>
+
     </div>
 
-    <p>
-        NECL helps adults build practical English they can actually use —
-        through guided speaking, relevant topics, and personalized feedback.
-    </p>
 
-    <a href="../">
-        Explore NECL →
-    </a>
+    <div class="cta-divider"></div>
+
+
+    <div class="cta-right">
+
+        <p class="cta-copy">
+            NECL helps adults build practical English they can
+            actually use — through guided speaking, relevant
+            topics, and personalized feedback.
+        </p>
+
+        <a href="../#contact" class="cta-button">
+            Explore NECL →
+        </a>
+
+    </div>
+
+</div>
 
 </section>
+
 
 </main>
 
 
-<footer>
-    © Next English Consulting Lab
+<!-- FOOTER -->
+
+<footer class="footer">
+
+<div class="container footer-inner">
+
+    <a href="../" class="footer-logo-box">
+
+        <img
+            src="../images/logo-horizontal.png"
+            alt="Next English Consulting Lab"
+            class="footer-logo">
+
+    </a>
+
+
+    <div class="footer-right">
+
+        <div class="footer-nav">
+
+            <a href="../#method">NECL 方法</a>
+            <a href="../#programs">方案</a>
+            <a href="../#process">每週流程</a>
+            <a href="../#testimonials">客戶回饋</a>
+            <a href="../#about">關於 Justin</a>
+            <a href="../#faq">常見問題</a>
+
+        </div>
+
+        <div class="copyright">
+            © Next English Consulting Lab. All rights reserved.
+        </div>
+
+    </div>
+
+</div>
+
 </footer>
 
 
 <script>
 
+/* =========================
+   NAME DATABASE
+   ========================= */
+
 const names = {
 
 male: [
+
 ["Adam","亞當","AD-əm","/ˈædəm/","Classic","Strong, straightforward","Hebrew","man, earth"],
 ["Alexander","亞歷山大","al-ig-ZAN-der","/ˌælɪɡˈzændər/","Classic","Strong, sophisticated","Greek","defender of men"],
 ["Arthur","亞瑟","AR-thər","/ˈɑrθər/","Classic","Distinguished, traditional","Celtic","possibly associated with bear"],
@@ -502,9 +900,12 @@ male: [
 ["Theodore","西奧多","THEE-ə-dor","/ˈθiədɔr/","Classic","Intelligent, distinguished","Greek","gift of God"],
 ["Thomas","湯瑪斯","TOM-əs","/ˈtɑməs/","Classic","Traditional, dependable","Aramaic","twin"],
 ["William","威廉","WIL-yəm","/ˈwɪljəm/","Classic","Strong, professional","Germanic","resolute protector"]
+
 ],
 
+
 female: [
+
 ["Abigail","艾比蓋兒","AB-i-gayl","/ˈæbɪɡeɪl/","Classic","Warm, polished","Hebrew","my father's joy"],
 ["Alice","艾莉絲","AL-is","/ˈælɪs/","Classic","Elegant, approachable","Germanic","noble"],
 ["Amelia","艾蜜莉亞","ə-MEE-lee-ə","/əˈmiliə/","Classic","Elegant, warm","Germanic","associated with work"],
@@ -540,9 +941,12 @@ female: [
 ["Victoria","維多利亞","vik-TOR-ee-ə","/vɪkˈtɔriə/","Classic","Strong, sophisticated","Latin","victory"],
 ["Violet","維奧莉特","VY-ə-lət","/ˈvaɪələt/","Classic","Elegant, distinctive","Latin/French","violet"],
 ["Zoe","柔伊","ZOH-ee","/ˈzoʊi/","Classic","Bright, energetic","Greek","life"]
+
 ],
 
+
 neutral: [
+
 ["Alex","艾力克斯","AL-eks","/ˈælɛks/","Classic","Confident, versatile","Greek","defender"],
 ["Ash","艾許","ASH","/æʃ/","Modern","Cool, understated","English","associated with the ash tree"],
 ["Avery","艾芙莉","AY-və-ree","/ˈeɪvəri/","Modern","Polished, versatile","English","traditionally associated with elf ruler"],
@@ -573,10 +977,15 @@ neutral: [
 ["Sasha","莎夏","SAH-shə","/ˈsɑʃə/","International","Warm, distinctive","Greek via Slavic languages","diminutive of Alexander or Alexandra"],
 ["Skyler","史凱勒","SKY-lər","/ˈskaɪlər/","Modern","Energetic, contemporary","Dutch","associated with scholar"],
 ["Taylor","泰勒","TAY-lər","/ˈteɪlər/","Modern classic","Casual, professional","English/French","tailor"]
+
 ]
 
 };
 
+
+/* =========================
+   PAGE FUNCTIONALITY
+   ========================= */
 
 let category = "male";
 
@@ -587,69 +996,102 @@ const sectionTitle = document.getElementById("sectionTitle");
 const tabs = document.querySelectorAll(".tab");
 
 const titles = {
-    male: "Male Names · 男性名字",
-    female: "Female Names · 女性名字",
-    neutral: "Gender-Neutral Names · 中性名字"
+    male: "MALE NAMES · 男性名字",
+    female: "FEMALE NAMES · 女性名字",
+    neutral: "GENDER-NEUTRAL NAMES · 中性名字"
 };
 
 
 function renderNames() {
 
-    const term = search.value.trim().toLowerCase();
+    const term =
+        search.value.trim().toLowerCase();
 
-    const filtered = names[category].filter(n =>
-        n[0].toLowerCase().includes(term) ||
-        n[1].includes(term)
-    );
+    const filtered =
+        names[category].filter(n =>
+            n[0].toLowerCase().includes(term) ||
+            n[1].includes(term)
+        );
 
     if (!filtered.length) {
-        grid.innerHTML =
-        `<div class="empty">No matching names found. / 找不到符合的名字。</div>`;
+
+        grid.innerHTML = `
+            <div class="empty">
+                No matching names found.<br>
+                找不到符合的名字。
+            </div>
+        `;
+
         return;
     }
 
-    grid.innerHTML = filtered.map(n => `
-        <article class="card" data-letter="${n[0][0]}">
+    grid.innerHTML =
+        filtered.map(n => `
 
-            <h2 class="name">${n[0]}</h2>
+            <article
+                class="card"
+                data-letter="${n[0][0]}">
 
-            <p class="pronunciation">
-                ${n[1]} · ${n[2]} · ${n[3]}
-            </p>
+                <h2 class="name">
+                    ${n[0]}
+                </h2>
 
-            <p class="impression">
-                <strong>${n[4]}</strong> · ${n[5]}
-            </p>
+                <p class="chinese">
+                    ${n[1]}
+                </p>
 
-            <p class="origin">
-                ${n[6]} · “${n[7]}”
-            </p>
+                <p class="pronunciation">
+                    ${n[2]} · ${n[3]}
+                </p>
 
-        </article>
-    `).join("");
+                <span class="style-tag">
+                    ${n[4]}
+                </span>
+
+                <p class="impression">
+                    ${n[5]}
+                </p>
+
+                <p class="origin">
+                    ${n[6]} · “${n[7]}”
+                </p>
+
+            </article>
+
+        `).join("");
 }
 
 
 function renderAlphabet() {
 
     const available =
-        [...new Set(names[category].map(n => n[0][0]))];
+        [...new Set(
+            names[category].map(n => n[0][0])
+        )];
 
     alphabet.innerHTML =
-        "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map(letter => {
+        "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        .split("")
+        .map(letter => {
 
-            const active = available.includes(letter);
+            const active =
+                available.includes(letter);
 
             return `
+
                 <button
                     class="letter ${active ? "" : "disabled"}"
                     data-letter="${letter}"
                     ${active ? "" : "disabled"}>
+
                     ${letter}
+
                 </button>
+
             `;
 
-        }).join("");
+        })
+        .join("");
 }
 
 
@@ -657,15 +1099,19 @@ tabs.forEach(tab => {
 
     tab.addEventListener("click", () => {
 
-        tabs.forEach(t => t.classList.remove("active"));
+        tabs.forEach(t =>
+            t.classList.remove("active")
+        );
 
         tab.classList.add("active");
 
-        category = tab.dataset.category;
+        category =
+            tab.dataset.category;
 
         search.value = "";
 
-        sectionTitle.textContent = titles[category];
+        sectionTitle.textContent =
+            titles[category];
 
         renderNames();
         renderAlphabet();
@@ -675,14 +1121,21 @@ tabs.forEach(tab => {
 });
 
 
-search.addEventListener("input", renderNames);
+search.addEventListener(
+    "input",
+    renderNames
+);
 
 
 alphabet.addEventListener("click", e => {
 
-    const button = e.target.closest(".letter:not(.disabled)");
+    const button =
+        e.target.closest(
+            ".letter:not(.disabled)"
+        );
 
-    if (!button) return;
+    if (!button)
+        return;
 
     search.value = "";
 
@@ -690,15 +1143,18 @@ alphabet.addEventListener("click", e => {
 
     requestAnimationFrame(() => {
 
-        const card = document.querySelector(
-            `.card[data-letter="${button.dataset.letter}"]`
-        );
+        const card =
+            document.querySelector(
+                `.card[data-letter="${button.dataset.letter}"]`
+            );
 
         if (card) {
+
             card.scrollIntoView({
                 behavior: "smooth",
-                block: "start"
+                block: "center"
             });
+
         }
 
     });
